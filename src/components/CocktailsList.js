@@ -5,7 +5,9 @@ class CocktailsList extends Component {
   render(){
     return (
       <div id="cocktail-list">
-
+      <ul>
+       {this.props.cocktails.map(cocktail => <Cocktail cocktail={cocktail} setCurrentCocktail={this.props.setCurrentCocktail}/>)}
+      </ul>
       </div>
     )
   }

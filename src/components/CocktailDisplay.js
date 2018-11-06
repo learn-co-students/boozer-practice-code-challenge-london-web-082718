@@ -2,10 +2,11 @@ import React from 'react'
 
 const CocktailDisplay = (props) => {
   return (
+    props.cocktail === null ? null :
     <div id="cocktail-display">
-      <h1>{/* Cocktail Name */}</h1>
-      <h3>{/* Cocktail Description */}</h3>
-      <p>{/* Cocktail Instructions */}</p>
+      <h1>{props.cocktail.name}</h1>
+      <h3>{props.cocktail.description}</h3>
+      <p>{props.cocktail.instructions}</p>
     </div>
   )
 }
